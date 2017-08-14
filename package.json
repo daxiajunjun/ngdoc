@@ -1,0 +1,41 @@
+{
+  "name": "yx-ngdocs",
+  "version": "0.0.3",
+  "author": "wjj",
+  "description": "ngdocs 文档生成的文件，修改自ng-docs",
+  "main": "index",
+  "repository": {
+    
+  },
+  "keywords": [
+    "gulpplugin",
+    "angular",
+    "gulp",
+    "ngdocs",
+    "documention"
+  ],
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "canonical-path": "0.0.2",
+    "extend": "1.3.0",
+    "gulp-util": "3.0.0",
+    "lodash": "2.4.1",
+    "marked": "0.3.2",
+    "merge-stream": "0.1.5",
+    "path": "0.4.9",
+    "string_decoder": "0.10.31",
+    "through2": "0.6.1",
+    "vinyl-fs": "0.3.7"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "jasmine-node": "^1.14.5"
+  },
+  "scripts": {
+    "test": "jasmine-node --color spec"
+  }
+}
