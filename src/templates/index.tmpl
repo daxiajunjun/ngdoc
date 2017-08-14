@@ -30,11 +30,17 @@
       addTag('link', {rel: 'stylesheet', href: 'css/prettify.css', type: 'text/css'});
       addTag('link', {rel: 'stylesheet', href: 'css/docs.css', type: 'text/css'});
       addTag('link', {rel: 'stylesheet', href: 'css/animations.css', type: 'text/css'});
+      addTag('link', {rel: 'stylesheet', href: 'css/bootstrap-datetimepicker.css', type: 'text/css'});
 
       <% _.forEach(styles, function(url) { %>
          addTag('link', {rel: 'stylesheet', href: '<%= url %>', type: 'text/css'}, sync);
       <% }); %>
 
+      addTag('script', {src: 'js/jquery.js'}, sync);
+      addTag('script', {src: 'js/date.js'}, sync);
+      addTag('script', {src: 'js/moment-with-locales.js'}, sync);
+      addTag('script', {src: 'js/datetimepicker.js'}, sync);
+      
       <% _.forEach(scripts, function(url) { %>
         addTag('script', {src: '<%= url %>'}, sync);
       <% }); %>
@@ -221,6 +227,13 @@
         </form>
       </div>
       <div class="col-sm-9">
+
+        <ol class="breadcrumb">
+          <li ng-repeat="crumb in breadcrumb" ng-class="{'active':$last}">
+            <a ng-show="crumb.url" href="{{crumb.url}}">{{crumb.name}}</a>
+            <a ng-show="!crumb.url" style="color: #777" >{{crumb.name}}</a>
+          </li>
+        </ol>
 
         <div id="loading" ng-show="loading">Loading...</div>
 

@@ -1,6 +1,6 @@
 {
   "name": "yx-ngdocs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "wjj",
   "description": "ngdocs 文档生成的文件，修改自ng-docs",
   "main": "index",
